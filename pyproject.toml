@@ -1,0 +1,50 @@
+[tool.poetry]
+name = "mulset"
+version = "0.0.1"
+description = ""
+authors = ["Michael Lenzen <m.lenzen@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.md"
+documentation = "https://mulset.lenzm.net"
+repository = "https://github.com/mlenzen/mulset"
+keywords = [
+	"collections",
+	"bag",
+	"multiset",
+	"ordered set",
+	"unique list",
+]
+classifiers = [
+	"Development Status :: 1 - Planning",
+	"Intended Audience :: Developers",
+	"License :: OSI Approved :: Apache Software License",
+	"Operating System :: OS Independent",
+	"Programming Language :: Python",
+	"Programming Language :: Python :: 3",
+	"Programming Language :: Python :: 3.9",
+	"Topic :: Software Development",
+	"Topic :: Software Development :: Libraries",
+	"Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.2"
+bumpversion = "^0.6.0"
+tox = "^3.21.4"
+flake8 = "^3.8.4"
+flake8-docstrings = "^1.5.0"
+coverage = "^5.4"
+Sphinx = {version = "^3.4.3"}
+sphinxcontrib-napoleon = {version = "^0.7"}
+alabaster = {git = "https://github.com/mlenzen/alabaster.git"}
+
+[tool.poetry.extras]
+docs = ["Sphinx", "sphinxcontrib-napoleon", "alabaster"]
+testing = ["pytest", "tox"]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
